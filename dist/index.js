@@ -27,14 +27,13 @@ exports.default = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         res.status(500).send("Internal Server Error");
     }
 });
-const start = () => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        yield app_1.default.listen({ port: Number(PORT), host: "0.0.0.0" });
-        console.log(`Server is running on ${APP_URL}`);
-    }
-    catch (error) {
-        app_1.default.log.error(error);
-        process.exit(1);
-    }
-});
-start();
+// const start = async () => {
+//   try {
+//     await app.listen({ port: Number(PORT), host: "0.0.0.0" });
+//     console.log(`Server is running on ${APP_URL}`);
+//   } catch (error) {
+//     app.log.error(error);
+//     process.exit(1);
+//   }
+// };
+// start();
