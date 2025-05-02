@@ -14,13 +14,13 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     res.status(500).send("Internal Server Error");
   }
 };
-const start = async () => {
-  try {
-    await app.listen({ port: Number(PORT), host: "0.0.0.0" });
-    console.log(`Server is running on ${APP_URL}`);
-  } catch (error) {
-    app.log.error(error);
-    process.exit(1);
-  }
-};
-start();
+// const start = async () => {
+//   try {
+//     await app.listen({ port: Number(PORT), host: "0.0.0.0" });
+//     console.log(`Server is running on ${APP_URL}`);
+//   } catch (error) {
+//     app.log.error(error);
+//     process.exit(1);
+//   }
+// };
+// start();
