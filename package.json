@@ -1,0 +1,37 @@
+{
+  "name": "fastify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn index.ts",
+    "build": "npx prisma generate && tsc",
+    "commit": "git status && git add . && powershell -Command \"$msg = Read-Host 'Enter commit message'; git commit -m $msg; $branch = Read-Host 'Enter branch name'; git push -u origin $branch\"",
+    "start": " npx prisma generate && node dist/index.js",
+    "vercel-build": "npm run build && npx prisma generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fastify/autoload": "^6.3.0",
+    "@fastify/cors": "^11.0.1",
+    "@fastify/jwt": "^9.1.0",
+    "@fastify/sensible": "^6.0.3",
+    "@fastify/swagger": "^9.5.0",
+    "@fastify/swagger-ui": "^5.2.2",
+    "@prisma/client": "^6.7.0",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.5.0",
+    "fastify": "^5.3.2",
+    "fastify-plugin": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^22.15.3",
+    "prisma": "^6.7.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
