@@ -8,7 +8,6 @@
     "commit": "git status && git add . && powershell -Command \"$msg = Read-Host 'Enter commit message'; git commit -m $msg; $branch = Read-Host 'Enter branch name'; git push -u origin $branch\"",
     "start": " npx prisma generate && node dist/index.js",
     "vercel-build": "tsc && prisma generate"
-
   },
   "keywords": [],
   "author": "",
@@ -22,6 +21,7 @@
     "@fastify/swagger": "^9.5.0",
     "@fastify/swagger-ui": "^5.2.2",
     "@prisma/client": "^6.7.0",
+    "@vercel/node": "^5.1.15",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.5.0",
     "fastify": "^5.3.2",
